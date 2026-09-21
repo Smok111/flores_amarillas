@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para ti, Amorchi 🌻💛</title>
+  <meta name="description" content="Una página especial dedicada a mi amor en el Día de las Flores Amarillas. 21 de septiembre." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css?v=10" />
+</head>
+<body>
+
+  <!-- Stars background -->
+  <canvas class="stars-canvas" id="stars-canvas"></canvas>
+
+  <!-- Falling petals canvas -->
+  <canvas class="stars-canvas" id="petal-canvas" style="z-index:1;"></canvas>
+
+  <!-- ===== SECTION 1: HERO ===== -->
+  <section class="section hero-section" id="hero">
+    <div class="hero-intro">
+      <span class="hero-date-badge">
+        <span>🌻</span> 21 de Septiembre
+      </span>
+
+      <p class="hero-for">Para ti, mi amorchi 💛</p>
+
+      <h1 class="hero-title">Feliz Día de las<br/>Flores Amarillas</h1>
+
+      <p class="hero-subtitle">
+        Cada pétalo amarillo lleva un pedacito de todo lo que siento por ti
+      </p>
+
+      <!-- Typing effect -->
+      <div class="typing-text" id="typing-text">
+        <span id="typed-output"></span><span class="typing-cursor"></span>
+      </div>
+
+      <button class="bloom-btn" id="bloom-btn">
+        <span>🌻</span> Haz florecer mi amor
+      </button>
+    </div>
+
+    <div class="scroll-hint">
+      <span>Sigue bajando</span>
+      <div class="scroll-hint__arrow"></div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 2: GLOWING GARDEN ===== -->
+  <section class="section garden-section" id="garden">
+    <canvas id="flower-canvas" class="flower-canvas"></canvas>
+    <div class="garden-overlay-text">
+      <span>UNA FLOR AMARILLA PARA ILUMINAR TU DÍA CON ALEGRÍA</span>
+    </div>
+  </section>
+
+
+  <!-- ===== SECTION 5: LOVE LETTER ===== -->
+  <section class="section letter-section" id="letter">
+    <div class="love-letter" data-animate="fade" id="love-letter">
+      <h2 class="love-letter__header">Para ti, mi amorcito 💌</h2>
+      <div class="love-letter__body">
+        Hoy es el día de las flores amarillas y no podía dejar pasar
+        este momento sin decirte lo mucho que significas para mí.<br/><br/>
+        <span class="highlight">Amorchi</span>, tú eres esa flor amarilla que le da
+        color a mi vida, que me hace sonreír cuando más lo necesito,
+        y que me recuerda que el amor bonito sí existe.<br/><br/>
+        Cada día a tu lado es como un campo de girasoles:
+        lleno de <span class="highlight">luz</span>, de <span class="highlight">alegría</span>
+        y de esa <span class="highlight">calidez</span> que solo tú sabes dar.<br/><br/>
+        Te amo con todo mi corazón, <span class="highlight">amorcito</span>.
+        Hoy y siempre. 🌻
+      </div>
+      <div class="love-letter__sign">Con todo mi amor 💛</div>
+      <div class="love-letter__hearts" id="letter-hearts"></div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 6: FLOWER MEANINGS ===== -->
+  <section class="section meanings-section" id="meanings">
+    <h2 class="meanings-title" data-animate="fade">Cada flor tiene un significado 🌼</h2>
+    <div class="flower-grid">
+      <article class="flower-card" data-flower="girasol" data-animate="stagger" id="card-girasol">
+        <span class="flower-card__emoji">🌻</span>
+        <h3 class="flower-card__name">Girasol</h3>
+        <p class="flower-card__meaning">Admiración, lealtad y amor eterno. Como lo que siento por ti.</p>
+      </article>
+      <article class="flower-card" data-flower="rosa" data-animate="stagger" id="card-rosa">
+        <span class="flower-card__emoji">🌹</span>
+        <h3 class="flower-card__name">Rosa Amarilla</h3>
+        <p class="flower-card__meaning">Amistad sincera y amor puro. Porque eres mi mejor amiga y mi amor.</p>
+      </article>
+      <article class="flower-card" data-flower="tulipan" data-animate="stagger" id="card-tulipan">
+        <span class="flower-card__emoji">🌷</span>
+        <h3 class="flower-card__name">Tulipán</h3>
+        <p class="flower-card__meaning">Alegría, esperanza y un amor que florece cada día más.</p>
+      </article>
+      <article class="flower-card" data-flower="margarita" data-animate="stagger" id="card-margarita">
+        <span class="flower-card__emoji">🌼</span>
+        <h3 class="flower-card__name">Margarita</h3>
+        <p class="flower-card__meaning">Inocencia y pureza. La belleza simple y perfecta, como tú.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== LOVE LETTER ===== -->
+  <section class="section letter-section" id="letter">
+    <div class="letter-card" data-animate="fade">
+      <h2 class="letter-title">Una nota para ti 💛</h2>
+      <p class="letter-body">
+        Desde que llegaste a mi vida, todos mis días tienen el color de las flores amarillas. 
+        Eres mi luz, mi paz y mi alegría más bonita.<br><br>
+        Gracias por ser como eres. Nunca olvides lo especial que eres para mí. ¡Te amo muchísimo, Amorchi! ✨
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p class="footer__text">
+      Hecho con <span class="footer__heart">💛</span> para ti, mi amorchi
+    </p>
+  </footer>
+
+  <!-- Popup -->
+  <div class="popup-overlay" id="popup-overlay"></div>
+  <div class="popup" id="popup">
+    <div class="popup__emoji" id="popup-emoji"></div>
+    <p class="popup__text" id="popup-text"></p>
+    <button class="popup__close" id="popup-close">Cerrar 💛</button>
+  </div>
+
+  <script src="script.js?v=10"></script>
+</body>
+</html>
