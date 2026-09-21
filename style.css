@@ -93,6 +93,7 @@ body {
 .hero-section {
   text-align: center;
   overflow: hidden;
+  z-index: 3; /* Ensures "Sigue bajando" renders above the overlapping canvas */
 }
 
 .hero-intro {
@@ -221,7 +222,7 @@ body {
 
 .garden-overlay-text {
   position: absolute;
-  top: 8%;
+  top: 20%; /* Moved down to prevent overlapping with "Sigue bajando" */
   width: 100%;
   text-align: center;
   font-family: var(--font-body);
